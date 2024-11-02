@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RestoFinder</title>
+  <link rel="stylesheet" href="/src/styles/main.css" />
+  <link rel="stylesheet" href="/src/styles/responsive.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" />
+  <link rel="manifest" href="/manifest.json">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async=""></script>
+</head>
+<body>
+  <a href="#restaurant-list" class="skip-link">Skip to content</a>
+  
+  <header>
+    <nav class="app-bar" role="navigation">
+      <div class="app-bar__brand">
+        <img src="./images/logo.png" alt="RestoFinder Logo" class="logo" />
+        <h1>RestoFinder</h1>
+      </div>
+      <div class="app-bar__menu">
+        <button id="menu" aria-label="Toggle Navigation Menu" tabindex="0">☰</button>
+      </div>
+      <ul class="app-bar__nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="#/favorites">Favorite</a></li>
+        <li><a href="https://linkedin.com/in/syifa-chandra-tiffani-sumardi" target="_blank" rel="noopener noreferrer">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div id="drawer" class="nav-drawer" role="navigation" aria-label="Side Navigation">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="#/favorites">Favorite</a></li>
+      <li><a href="https://linkedin.com/in/syifa-chandra-tiffani-sumardi" target="_blank" rel="noopener noreferrer">About Us</a></li>
+    </ul>
+  </div>
+  
+  
+  <main id="main-content">
+    <section class="hero" role="banner">
+      <div class="hero__content">
+        <h2>Welcome to RestoFinder</h2>
+        <p>Make it easy to find your favorite restaurants!</p>
+      </div>
+      <span class="sr-only">Background Picture</span>
+    </section>
+
+    <div id="loading-indicator" class="hidden">Loading...</div>
+
+    
+    <section id="restaurant-view" aria-labelledby="restaurant-view-title">
+      <h2 id="restaurant-view-title">Restaurant App</h2>
+      
+
+      <div id="restaurant-list" aria-labelledby="restaurant-list-title">
+        <h3 id="restaurant-list-title">Restaurant List</h3>
+        <div id="restaurant-list-content"></div>
+      </div>
+      
+   
+      <div id="restaurant-detail" class="hidden" aria-labelledby="restaurant-detail-title">
+        <h3 id="restaurant-detail-title">Restaurant Detail</h3>
+        <div id="detail-content"></div>
+      </div>
+    </section>
+    
+ 
+    <div id="favorite-list" class="hidden" aria-labelledby="favorite-list-title">
+      <h3 id="favorite-list-title">Daftar Restoran Favorit</h3>
+      <div id="favorites-container"></div>
+      <button id="back-to-home" class="back-button small">Kembali ke Home</button>
+    </div>
+    
+    <section id="news-and-events" aria-labelledby="news-and-events-title">
+      <h2 id="news-and-events-title">Berita & Acara</h2>
+      <article class="event-item">
+        <h3>Festival Makanan Bulanan</h3>
+        <p>Datang dan nikmati festival makanan bulanan kami pada tanggal 20 setiap bulannya!</p>
+      </article>
+      <article class="event-item">
+        <h3>Promo Spesial Akhir Tahun!</h3>
+        <p>Dapatkan diskon 20% untuk semua makanan pada perayaan akhir tahun!</p>
+      </article>
+    </section>
+    
+  </main>
+  
+  <footer class="footer" role="contentinfo">
+    <p>&copy; 2024 - RestoFinder</p>
+  </footer>
+  
+  <script type="module" src="/src/scripts/index.js"></script>
+  <script type="module" src="/src/scripts/detail.js"></script>
+  <script type="module" src="/src/scripts/favorite.js"></script>
+</body>
+</html>

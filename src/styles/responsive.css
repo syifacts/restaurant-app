@@ -1,0 +1,125 @@
+/* Responsive */
+@media screen and (max-width: 320px) {
+  .app-bar {
+      padding: 0.5rem; 
+  }
+
+  .app-bar__brand .logo {
+      width: 100px; 
+  }
+
+  .app-bar__nav li {
+      margin-left: 1rem;
+  }
+
+  .hero__content h2 {
+      font-size: 24px; 
+  }
+
+  .hero__content p {
+      font-size: 14px; 
+  }
+
+  .restaurant-item {
+      padding: 0.5rem; 
+  }
+
+  button, a {
+      min-width: 40px; 
+      min-height: 40px; 
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 499px) {
+  .app-bar__menu button {
+      display: block;
+  }
+
+  .app-bar__nav {
+      display: none;
+  }
+
+  .nav-drawer {
+      display: block;
+  }
+
+  .hero__content h2 {
+      font-size: 36px;
+  }
+
+  .hero__content p {
+      font-size: 18px;
+  }
+
+  .restaurant-item {
+      flex-direction: column;
+  }
+
+  .restaurant-item__thumbnail {
+      width: 100%;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 500px) and (max-width: 1023px) {
+  .restaurant-item {
+      flex-direction: row;
+  }
+
+  .restaurant-item__thumbnail {
+      width: 250px;
+      height: 200px;
+  }
+
+  .restaurant-item__content {
+      padding: 10px 20px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .hero {
+      width: 100%;
+      height: 500px; 
+  }
+
+  #restaurant-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+  }
+
+  .restaurant-item {
+      flex-direction: column;
+  }
+
+  .restaurant-item__thumbnail {
+      width: 100%;
+  }
+
+  .footer {
+      position: relative;
+  }
+}
+
+/* Gambar latar belakang untuk perangkat kecil */
+@media (max-width: 600px) {
+  .hero {
+      background-image: url('../public/images/hero-image_2-small.jpg');
+  }
+}
+
+/* Gambar latar belakang untuk perangkat sedang */
+@media (min-width: 601px) and (max-width: 1200px) {
+  .hero {
+      background-image: url('../public/images/hero-image_2-medium.jpg');
+  }
+}
+
+/* Gambar latar belakang untuk perangkat besar */
+@media (min-width: 1201px) {
+  .hero {
+      background-image: url('../public/images/hero-image_2-large.jpg');
+  }
+}
